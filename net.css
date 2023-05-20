@@ -13,7 +13,6 @@ body{
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    background-attachment: fixed;
     object-fit: cover;
     width: 100%;
     height: 500px;
@@ -35,24 +34,27 @@ body{
 .hero-sign{
     padding: 10px;
     background-color: red;
-    margin-right: 10px;
     border-radius: 10px;
     cursor: pointer;
     color: #fff;
 }
 .hero-sign h4{
-    color: black;
+    color: #fff;
     font-weight: 600;
     cursor: pointer;
 }
 .hero-sign:hover{
     background-color: #fff;
-    color: red;
+    color: black;
+}
+.hero-sign h4:hover{
+    color: black;
 }
 .text-content{
     display: flex;
     justify-content: center;
     align-items: center;
+    width: 100%;
 }
 .text-area h2{
     color: #fff;
@@ -147,6 +149,7 @@ body{
     object-fit: cover;
     border-radius: 20px;
     width: 400px;
+    object-fit: cover;
 }
 .details-text{
     display: flex;
@@ -185,7 +188,7 @@ body{
 .download-image img{
     object-fit: cover;
     height: 400px;
-    width: 500px;
+    width: 400px;
     align-items: center;
     cursor: pointer;
     border-radius: 20px;
@@ -250,17 +253,28 @@ body{
 }
 
 /*media query responsive*/
-@media(max-width: 900px){
+@media only screen and (max-width: 980px){
+    body{
+        width: 100%;
+    }
     .hero-section{
         width: 100%;
         object-fit: cover;
         background-position: center;
         background-attachment: fixed;
         background-repeat: no-repeat;
+        background-size: cover;
         height: 550px;
+
     }
     .logo h2{
         letter-spacing: 0;
+        font-size: 30px;
+    }
+    .hero-sign{
+        position: absolute;
+        right: 0;
+        margin-right: 0;
     }
     .hero-form{
         display: flex;
@@ -269,6 +283,10 @@ body{
         margin-top: 20px;
         flex: 0.5;
         margin-bottom: 30px;
+    }
+    .form-btn{
+        height: 45px;
+        padding: 10px;
     }
     
     .wrapper{
@@ -283,7 +301,7 @@ body{
     }
     .wrapper-image img{
         height: 550px;
-        width: 350px;
+        width: 200px;
         object-fit: cover;
     }
     .netflix-download{
@@ -314,7 +332,7 @@ body{
         padding: 5px;
     }
 }
-@media(max-width: 1300px){
+@media only screen and (max-width: 980px){
     .logo h2{
         letter-spacing: 0.7rem;
     }
@@ -334,17 +352,5 @@ body{
     }
     .trailer-section iframe{
         width: 500px;
-    }
-}
-@media(max-width: 700px){
-    .hero-section{
-        height: 650px;
-        width: 100%;
-    }
-    .form-btn{
-        padding: 5px;
-    }
-    .hero-form-div input{
-        padding: 15px;
     }
 }
